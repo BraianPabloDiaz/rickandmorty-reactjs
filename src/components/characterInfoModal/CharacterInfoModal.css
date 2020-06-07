@@ -1,0 +1,40 @@
+.CharacterInfoModal{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.CharacterInfoModal__img {
+    max-width: 200px;
+  }
+
+.CharacterInfoModal_info_container{
+    display: flex;
+    max-width: 300px;
+    flex-direction: column;
+    padding-left: 1em;
+}
+
+.CharacterInfoModal__name{
+    font-size: 1.5em;
+    font-weight: 800;
+    text-rendering: optimizeLegibility;
+}
+
+.CharacterInfoModal__property{
+    font-size: 0.9em;
+    color: #607D8B;
+}
+
+.CharacterInfoModal__property__wrapper{
+    display: flex;
+    flex-direction: column;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+.CharacterInfoModal__status{
+    font-weight: 500;
+    font-size: 1.1em;
+}

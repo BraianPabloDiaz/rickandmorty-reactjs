@@ -1,0 +1,21 @@
+.List {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.List__wrapper__buttons {
+  display: flex;
+  justify-content: center;
+}
+
+
+.List__end{
+  display: flex;
+  justify-content: center;
+  color: white;
+  font-size: 1em;
+  font-weight: 800;
+  margin: 2em;
+}

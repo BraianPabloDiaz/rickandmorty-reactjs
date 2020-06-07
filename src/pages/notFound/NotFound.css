@@ -1,0 +1,19 @@
+
+.NotFound{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.NotFound__title{
+    color: white;
+    font-size: 3em;
+    font-weight: 800;
+    text-align: center;
+}
+
+.NotFound__logo{
+    width: 100%;
+    max-width: 400px;
+}

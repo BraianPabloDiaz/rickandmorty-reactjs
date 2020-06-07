@@ -1,0 +1,13 @@
+.Home {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background: url("../../images/stars.svg"), #1b1b25;
+}
+
+.Home_img {
+  width: 100%;
+  max-width: 500px;
+}
