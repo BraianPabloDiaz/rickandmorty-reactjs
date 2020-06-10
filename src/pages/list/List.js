@@ -6,6 +6,7 @@ import Navbar from "../../components/navbar/Navbar";
 import CharacterInfoModal from "../../components/characterInfoModal/CharacterInfoModal";
 import Loader from '../../components/loader/Loader';
 import CharacterList from '../../components/characterList/CharacterList';
+import LoadMoreButton from '../../components/loadMoreButton/LoadMoreButton';
 
 import { providerSearchPage, providerSearchCharacterInfo } from '../../providers/CharacterProvider';
 
@@ -58,15 +59,8 @@ class List extends React.Component {
                 <Navbar />
                 <CharacterList onClickHandler={this.openCharacterInfo} />
                 <CharacterInfoModal />
+                <LoadMoreButton onClickHandler={this.fectchCharacters} />
                 {this.props.loading && <Loader />}
-                {
-                    !this.props.loading && !this.props.lastPage && (<div className="List__wrapper__buttons">
-                        <button className="btn btn-primary m-4"
-                            onClick={() => this.fectchCharacters()}>
-                            Load more
-                    </button>
-                    </div>)
-                }
                 {this.props.lastPage && <h1 className="List__end">END</h1>}
             </div>
         </React.Fragment>);

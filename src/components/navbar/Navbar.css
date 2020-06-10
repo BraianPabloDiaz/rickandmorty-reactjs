@@ -7,6 +7,7 @@
     background: red;
     width: 100%;
     background-color: #1C3643;
+    z-index: 2;
 }
 
   .Navbar__brand {
@@ -22,8 +23,11 @@
   }
   
   .Navbar__brand-logo {
-    margin-right: 0.5rem;
+    background-image: url('../../images/Rick_and_Morty_footer.png');
     height: 4em;
+    width: 4em;
+    object-fit: fill;
+    background-size: cover;
   }
 
   .Navar__brand-name{

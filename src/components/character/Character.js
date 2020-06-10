@@ -1,38 +1,28 @@
-import React from "react";
+import React, { useState } from "react";
 import Skeleton from 'react-loading-skeleton';
 
 import "./Character.css";
 
-export default class Character extends React.Component {
+import { ImgEffect } from './Style';
 
-    constructor(props) {
-        super(props);
-        this.state = {
-            loaded: false
-        };
-    }
+export default function Character(props) {
 
-    handleImageLoaded() {
-        this.setState({ loaded: true });
-    }
+    const character = props.character;
+    const [loaded, setLoaded] = useState(false);
 
-    render() {
-        const character = this.props.character;
-        const loaded = this.state.loaded;
+    return (<div className="Character"
+        onClick={
+            () => {
+                props.onClickHandler(character)
+            }
+        }>
+        {!loaded && <Skeleton height={200} />}
+        <ImgEffect className="Character__img" alt="profile_img"
+            src={character.image} onLoad={() => { setLoaded(true) }} />
+        <label className="Character__label"> {
+            character.name || <Skeleton />
+        }</label>
+    </div >);
 
-        return (<div className="Character"
-            onClick={
-                () => {
-                    this.props.onClickHandler(character)
-                }
-            }>
-            {!loaded && <Skeleton height={200} />}
-            <img className="Character__img" alt="profile_img"
-                src={character.image} onLoad={this.handleImageLoaded.bind(this)} />
-            <label className="Character__label"> {
-                character.name || <Skeleton />
-            }</label>
-        </div >);
-    }
 
 }

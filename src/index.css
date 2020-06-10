@@ -11,7 +11,7 @@ body,
 html,
 #root {
   height: 100%;
-  background-color: #101425;
+  background: url('./images/stars.svg'),#1b1b25;
 }
 
 code {

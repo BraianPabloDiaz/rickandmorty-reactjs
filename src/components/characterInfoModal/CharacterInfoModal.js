@@ -3,6 +3,8 @@ import Modal from '../modal/Modal';
 import { connect } from "react-redux";
 import { setCharacterSelected } from '../../actions';
 
+import { ImgEffect } from './style';
+
 import './CharacterInfoModal.css'
 
 function CharacterInfoModal(props) {
@@ -24,7 +26,7 @@ function CharacterInfoModal(props) {
     return <Modal isOpen={isOpen} onClose={onClose}>
         <article className="CharacterInfoModal" >
             <div>
-                <img className="CharacterInfoModal__img" src={character.image} alt="profile_image" />
+                <ImgEffect className="CharacterInfoModal__img" src={character.image} alt="profile_image" />
             </div>
             <section className="CharacterInfoModal_info_container" >
                 <span className="CharacterInfoModal__name"> {character.name} </span>
